@@ -5,9 +5,20 @@
   <link rel="stylesheet" type="text/css" href="./style.css">
   <link href="https://fonts.googleapis.com/css2?family=Caveat" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=VT323" rel="stylesheet">
+
+  <script language="javascript" type="text/javascript">
+	function playSound(soundfile) {
+    document.getElementById("dummy").innerHTML=
+    "<embed src=\""+soundfile+"\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
+    var audio = document.getElementById("dummy");
+  	audio.volume = 0.1;
+}
+
+</script>
 </head>
 <header>
-<img class="bannerimg" src="img/play.png">
+<span id="dummy"></span>
+<p onclick="playSound('retro.mp3');"><img class="bannerimg" src="img/play.png"></p>
 <center>
 <img class="bannerimg" src="img/banner.png"><br />
   <nav class="container">
